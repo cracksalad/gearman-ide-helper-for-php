@@ -46,7 +46,7 @@ class GearmanWorker {
   /**
    * @psalm-param callable(GearmanJob,&mixed):string $function
    */
-  public function addFunction(string $function_name, callable $function, ?mixed $context = null, int $timeout = 0): bool {}
+  public function addFunction(string $function_name, callable $function, mixed $context = null, int $timeout = 0): bool {}
   
   public function work(): bool {}
   

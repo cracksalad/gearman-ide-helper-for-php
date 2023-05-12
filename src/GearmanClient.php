@@ -65,21 +65,21 @@ class GearmanClient {
   
   public function ping(string $workload): bool {}
   
-  public function addTask(string $function_name, string|int|float $workload, ?mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
+  public function addTask(string $function_name, string|int|float $workload, mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
   
-  public function addTaskHigh(string $function_name, string|int|float $workload, ?mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
+  public function addTaskHigh(string $function_name, string|int|float $workload, mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
   
-  public function addTaskLow(string $function_name, string|int|float $workload, ?mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
+  public function addTaskLow(string $function_name, string|int|float $workload, mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
   
-  public function addTaskBackground(string $function_name, string|int|float $workload, ?mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
+  public function addTaskBackground(string $function_name, string|int|float $workload, mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
   
-  public function addTaskHighBackground(string $function_name, string|int|float $workload, ?mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
+  public function addTaskHighBackground(string $function_name, string|int|float $workload, mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
   
-  public function addTaskLowBackground(string $function_name, string|int|float $workload, ?mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
+  public function addTaskLowBackground(string $function_name, string|int|float $workload, mixed $context = null, ?string $unique_key = null): GearmanTask|false {}
   
   public function runTasks(): bool {}
   
-  public function addTaskStatus(string $job_handle, ?mixed $context = null): GearmanTask {}
+  public function addTaskStatus(string $job_handle, mixed $context = null): GearmanTask {}
   
   /**
    * @psalm-param callable(GearmanTask):void $function
