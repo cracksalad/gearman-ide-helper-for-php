@@ -1,5 +1,10 @@
 # Gearman IDE helper
 
+[![Latest Stable Version](https://poser.pugx.org/cracksalad/gearman-ide-helper/v)](https://packagist.org/packages/cracksalad/gearman-ide-helper)
+[![Total Downloads](https://poser.pugx.org/cracksalad/gearman-ide-helper/downloads)](https://packagist.org/packages/cracksalad/gearman-ide-helper)
+[![License](https://poser.pugx.org/cracksalad/gearman-ide-helper/license)](https://packagist.org/packages/cracksalad/gearman-ide-helper)
+[![PHP Version Require](https://poser.pugx.org/cracksalad/gearman-ide-helper/require/php)](https://packagist.org/packages/cracksalad/gearman-ide-helper)
+
 This package contains IDE help files for [PECL Gearman extension](https://github.com/php/pecl-networking-gearman). It may be used for autocomplete in your IDE and type checking. 
 
 This package is up to date with **PECL Gearman extension version 2.1** and uses types **compatible with PHP 8.0+**. Additionally it uses type annotations based on [Psalm](https://psalm.dev/).
@@ -13,3 +18,7 @@ You should not use this package in production. Thereby add the `--dev` flag when
 ```bash
 composer require --dev cracksalad/gearman-ide-helper
 ```
+
+## License
+
+This library is licensed under the MIT License (MIT). Please see [LICENSE](LICENSE) for more information.

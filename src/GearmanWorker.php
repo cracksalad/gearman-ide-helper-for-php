@@ -29,9 +29,9 @@ class GearmanWorker {
   
   public function setId(string $id): bool {}
   
-  public function addServer(string $host = null, int $port = 0): bool {}
+  public function addServer(?string $host = null, int $port = 0): bool {}
   
-  public function addServers(string $servers = null): bool {}
+  public function addServers(?string $servers = null): bool {}
   
   public function wait(): bool {}
   

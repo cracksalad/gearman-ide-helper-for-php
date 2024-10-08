@@ -27,9 +27,9 @@ class GearmanClient {
   
   public function setTimeout(int $timeout): bool {}
   
-  public function addServer(string $host = null, int $port = 0, bool $setupExceptionHandler = true): bool {}
+  public function addServer(?string $host = null, int $port = 0, bool $setupExceptionHandler = true): bool {}
   
-  public function addServers(string $servers = null, bool $setupExceptionHandler = true): bool {}
+  public function addServers(?string $servers = null, bool $setupExceptionHandler = true): bool {}
   
   public function wait(): bool {}
   
