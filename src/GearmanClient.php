@@ -27,6 +27,11 @@ class GearmanClient {
   
   public function setTimeout(int $timeout): bool {}
   
+  /**
+   * NOTE: setSSL is conditionally compiled (#ifdef HAVE_GEARMAN_CLIENT_SET_SSL).
+   */
+  public function setSSL(bool $ssl = true, ?string $ca_file = null, ?string $certificate = null, ?string $key_file = null): bool {}
+  
   public function addServer(?string $host = null, int $port = 0, bool $setupExceptionHandler = true): bool {}
   
   public function addServers(?string $servers = null, bool $setupExceptionHandler = true): bool {}
@@ -37,7 +42,7 @@ class GearmanClient {
   
   public function doHigh(string $function, string $workload, ?string $unique = null): string {}
   
-  public function dolow(string $function, string $workload, ?string $unique = null): string {}
+  public function doLow(string $function, string $workload, ?string $unique = null): string {}
   
   public function doBackground(string $function, string $workload, ?string $unique = null): string {}
   
@@ -49,17 +54,17 @@ class GearmanClient {
   
   /**
    * @return int[]
-   * @psalm-return array{0:int,1:int}
+   * @psalm-return list{int, int}
    */
   public function doStatus(): array {}
   
   /**
-   * @psalm-return array{0:bool,1:bool,2:int,3:int}
+   * @psalm-return list{bool, bool, int, int}
    */
   public function jobStatus(string $job_handle): array {}
   
   /**
-   * @psalm-return array{0:bool,1:bool,2:int,3:int}
+   * @psalm-return list{bool, bool, int, int}
    */
   public function jobStatusByUniqueKey(string $unique_key): array {}
   
@@ -79,7 +84,7 @@ class GearmanClient {
   
   public function runTasks(): bool {}
   
-  public function addTaskStatus(string $job_handle, mixed $context = null): GearmanTask {}
+  public function addTaskStatus(string $job_handle, mixed $context = null): GearmanTask|false {}
   
   /**
    * @psalm-param callable(GearmanTask):void $function

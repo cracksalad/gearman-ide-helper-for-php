@@ -7,11 +7,11 @@ class GearmanJob {
 
   public function __destruct() {}
   
-  public function returnCode(): ?int {}
+  public function returnCode(): int {}
   
-  public function setReturn(int $gearman_return_t): ?bool {}
+  public function setReturn(int $gearman_return_t): bool {}
   
-  public function sendData(string $data): ?bool {}
+  public function sendData(string $data): bool {}
   
   public function sendWarning(string $warning): bool {}
   
@@ -31,5 +31,5 @@ class GearmanJob {
   
   public function workload(): string {}
   
-  public function workloadSize(): ?int {}
+  public function workloadSize(): int {}
 }

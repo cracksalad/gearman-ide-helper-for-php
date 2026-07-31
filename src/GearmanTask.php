@@ -36,7 +36,7 @@ class GearmanTask {
   public function sendWorkload(string $data): int|false {}
   
   /**
-   * @psalm-return false|array{0:int,1:string}
+   * @psalm-return false|list{int, string}
    */
   public function recvData(int $data_len): false|array {}
 }
